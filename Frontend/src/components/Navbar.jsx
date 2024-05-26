@@ -87,13 +87,7 @@ export const Navbar = () => {
                   <a href="/course">Course</a>
                 </li>
 
-                <li>
-                  <a>Contact</a>
-                </li>
-
-                <li>
-                  <a>About</a>
-                </li>
+                
               </ul>
             </div>
             <a className="text-2xl font-bold cursor-pointer">Book Store</a>
@@ -108,13 +102,7 @@ export const Navbar = () => {
                   <a href="/course">Course</a>
                 </li>
 
-                <li>
-                  <a>Contact</a>
-                </li>
-
-                <li>
-                  <a>About</a>
-                </li>
+              
               </ul>
             </div>
             <div className="hidden md:block">

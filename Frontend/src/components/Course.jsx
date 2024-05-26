@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Cards from "./Cards";
-// import list from "../../public/list.json";
 import axios from 'axios'
 import { Link } from "react-router-dom";
 
@@ -10,8 +9,10 @@ function Course() {
     const getBook = async () => {
       try {
         const res = await axios.get("http://localhost:4000/book");
+        const data = res.data.filter((data) => data.category === "Paid");
+        setBook(data);
         console.log(res.data);
-        setBook(res.data);
+        // setBook(res.data);
       } catch (error) {
         console.log(error);
       }
@@ -28,13 +29,9 @@ function Course() {
           </h1>
 
           <p className="mt-12">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro,
-            assumenda? Repellendus, iste corrupti? Tempore laudantium
-            repellendus accusamus accusantium sed architecto odio, nisi expedita
-            quas quidem nesciunt debitis dolore non aspernatur praesentium
-            assumenda sint quibusdam, perspiciatis, explicabo sequi fugiat amet
-            animi eos aut. Nobis quisquam reiciendis sunt quis sed magnam
-            consequatur!
+          Books are very important for us. A good book is helpful in the
+          success of a person. It give new direction to our life. It plays
+          the role of a good friend and teacher.
           </p>
           <Link to="/">
             <button className="mt-6 bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-700 duration-300">
